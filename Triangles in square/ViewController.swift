@@ -23,6 +23,8 @@ final class ViewController: UIViewController {
     private var dataSource: [[UIColor?]] = []
     private var columnsCount = Int.initialColumnsCount {
         didSet {
+            removedCellPoint = Point(row: Int.random(in: 0 ..< columnsCount),
+                                     column: Int.random(in: 0 ..< columnsCount))
             setupDataSource()
             if columnsCount != oldValue {
                 let layout = createCollectionViewLayout()
@@ -30,29 +32,47 @@ final class ViewController: UIViewController {
                 zoomView.collectionView.collectionViewLayout = layout
             }
             zoomView.collectionView.reloadData()
+            pickerView.reloadAllComponents()
+            pickerView.selectRow(removedCellPoint.row, inComponent: 0, animated: true)
+            pickerView.selectRow(removedCellPoint.column, inComponent: 1, animated: true)
         }
     }
+    private var removedCellPoint = Point(row: 0, column: 0)
     private let cellId = "cellId"
 
     // MARK: UI
 
-    // TODO: Идея: добавить два колеса для выбора позиции пустой (белой) клетки
     private lazy var textField: UITextField = {
         let textInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         let textField = UITextField.textFieldWithInsets(textInsets)
         textField.text = "\(columnsCount)"
         textField.keyboardType = .numberPad
+        textField.textAlignment = .center
         textField.layer.cornerRadius = 10
-        textField.layer.borderWidth = 1
+        textField.layer.borderWidth = 2
         textField.layer.borderColor = UIColor.gray.cgColor
         return textField
     }()
-    private lazy var button: UIButton = {
+    private lazy var generateButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 10
         button.setTitle("Сгенерировать", for: .normal)
-        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapGenerateButton), for: .touchUpInside)
+        return button
+    }()
+    private lazy var pickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        return pickerView
+    }()
+    private lazy var removeCellButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 10
+        button.setTitle("Выколоть эту клетку", for: .normal)
+        button.addTarget(self, action: #selector(didTapRemoveCellButton), for: .touchUpInside)
         return button
     }()
     private lazy var zoomContainerView = UIView()
@@ -95,17 +115,27 @@ final class ViewController: UIViewController {
         view.addSubview(textField)
         let topInset = statusWithNavigationBarsHeight
         let buttonHeight: CGFloat = 40
-        let buttonWidth: CGFloat = buttonHeight * 4
+        let generateButtonWidth: CGFloat = buttonHeight * 4
         textField.frame = CGRect(x: 5, y: topInset + 5,
-                                 width: view.frame.width - buttonWidth - 15,
+                                 width: view.frame.width - generateButtonWidth - 15,
                                  height: buttonHeight + 5)
 
-        view.addSubview(button)
-        button.frame = CGRect(x: textField.frame.maxX + 5, y: topInset + 5,
-                              width: buttonWidth, height: buttonHeight + 5)
+        view.addSubview(generateButton)
+        generateButton.frame = CGRect(x: textField.frame.maxX + 5, y: topInset + 5,
+                              width: generateButtonWidth, height: buttonHeight + 5)
+
+        let removeCellButtonWidth: CGFloat = buttonHeight * 5
+        view.addSubview(pickerView)
+        pickerView.frame = CGRect(x: 5, y: textField.frame.maxY + 5,
+                                  width: view.frame.width - removeCellButtonWidth - 15,
+                                  height: buttonHeight + 5)
+
+        view.addSubview(removeCellButton)
+        removeCellButton.frame = CGRect(x: pickerView.frame.maxX + 5, y: textField.frame.maxY + 5,
+                                        width: removeCellButtonWidth, height: buttonHeight + 5)
 
         view.addSubview(zoomContainerView)
-        let frame = CGRect(x: 0, y: textField.frame.maxY + 5,
+        let frame = CGRect(x: 0, y: pickerView.frame.maxY + 5,
                            width: view.frame.width,
                            height: view.frame.height - textField.frame.maxY - 5)
         zoomContainerView.frame = frame
@@ -116,13 +146,7 @@ final class ViewController: UIViewController {
         dataSource = (0 ..< columnsCount).map { _ in
             (0 ..< columnsCount).map { _ in nil }
         }
-
-        let selectedRow = Int.random(in: 0 ..< columnsCount)
-        let selectedColumn = Int.random(in: 0 ..< columnsCount)
-
-        let color = UIColor.white
-        let point = Point(row: selectedRow, column: selectedColumn)
-        paintBlockAt(point: point, color: color, iteration: columnsCount / 2)
+        paintBlockAt(point: removedCellPoint, color: UIColor.white, iteration: columnsCount / 2)
     }
 
     private func paintBlockAt(point: Point, color: UIColor, iteration: Int) {
@@ -179,7 +203,7 @@ final class ViewController: UIViewController {
 
     // MARK: Actions
 
-    @objc private func didTapButton() {
+    @objc private func didTapGenerateButton() {
         if let newColumnsCount = Int(textField.text ?? ""),
            newColumnsCount.isPowerOfTwo {
             view.endEditing(true)
@@ -192,14 +216,20 @@ final class ViewController: UIViewController {
             present(alert, animated: true)
         }
     }
+
+    @objc private func didTapRemoveCellButton() {
+        removedCellPoint = Point(row: pickerView.selectedRow(inComponent: 0),
+                                 column: pickerView.selectedRow(inComponent: 1))
+        setupDataSource()
+        zoomView.collectionView.reloadData()
+    }
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension ViewController: UICollectionViewDataSource {
 
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.reduce(0) { $0 + $1.count }
     }
 
@@ -214,17 +244,19 @@ extension ViewController: UICollectionViewDataSource {
     }
 }
 
-// MARK: - UICollectionViewDelegate
+// MARK: - UIPickerViewDataSource, UIPickerViewDelegate
 
-//extension ViewController: UICollectionViewDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        zoomView.collectionView(collectionView, willDisplay: cell, forItemAt: indexPath)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.deselectItem(at: indexPath, animated: true)
-//        let (selectedRow, selectedColumn) = convertToRowAndColumn(indexPath)
-//        updateDataSource(withSelectedRow: selectedRow, selectedColumn: selectedColumn)
-//    }
-//}
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return columnsCount
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(row)"
+    }
+}

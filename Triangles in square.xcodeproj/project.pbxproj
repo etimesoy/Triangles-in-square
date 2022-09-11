@@ -72,15 +72,23 @@
 				44D530B228CC7AEC00DB0694 /* AppDelegate.swift */,
 				44D530B628CC7AEC00DB0694 /* ViewController.swift */,
 				44DDFC1528CDBDE9007389AF /* Point.swift */,
-				44CFCEFC28CD07390073C595 /* UITextField+Ext.swift */,
-				44CFCEFE28CD0B5E0073C595 /* Int+Ext.swift */,
-				44DDFC1128CDBD53007389AF /* UIColor+Ext.swift */,
-				44DDFC1328CDBD76007389AF /* UIViewController+Ext.swift */,
+				44FB153128CE18AF001A20CD /* Extensions */,
 				44D530BB28CC7AF000DB0694 /* Assets.xcassets */,
 				44D530BD28CC7AF000DB0694 /* LaunchScreen.storyboard */,
 				44D530C028CC7AF000DB0694 /* Info.plist */,
 			);
 			path = "Triangles in square";
+			sourceTree = "<group>";
+		};
+		44FB153128CE18AF001A20CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44CFCEFC28CD07390073C595 /* UITextField+Ext.swift */,
+				44CFCEFE28CD0B5E0073C595 /* Int+Ext.swift */,
+				44DDFC1128CDBD53007389AF /* UIColor+Ext.swift */,
+				44DDFC1328CDBD76007389AF /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B128AFD3D14D088975F9DDF8 /* Frameworks */ = {
