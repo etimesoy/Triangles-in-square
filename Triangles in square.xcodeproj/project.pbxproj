@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7C00E71D0F6B1DDB749A5A /* Pods_Triangles_in_square.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EAE5FA1CF44F557E0C2175 /* Pods_Triangles_in_square.framework */; };
+		44CFCEFD28CD07390073C595 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CFCEFC28CD07390073C595 /* UITextField+Ext.swift */; };
+		44CFCEFF28CD0B5E0073C595 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CFCEFE28CD0B5E0073C595 /* Int+Ext.swift */; };
 		44D530B328CC7AEC00DB0694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D530B228CC7AEC00DB0694 /* AppDelegate.swift */; };
-		44D530B528CC7AEC00DB0694 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D530B428CC7AEC00DB0694 /* SceneDelegate.swift */; };
 		44D530B728CC7AEC00DB0694 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D530B628CC7AEC00DB0694 /* ViewController.swift */; };
-		44D530BA28CC7AEC00DB0694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D530B828CC7AEC00DB0694 /* Main.storyboard */; };
 		44D530BC28CC7AF000DB0694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D530BB28CC7AF000DB0694 /* Assets.xcassets */; };
 		44D530BF28CC7AF000DB0694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D530BD28CC7AF000DB0694 /* LaunchScreen.storyboard */; };
+		44DDFC1228CDBD53007389AF /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDFC1128CDBD53007389AF /* UIColor+Ext.swift */; };
+		44DDFC1428CDBD76007389AF /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDFC1328CDBD76007389AF /* UIViewController+Ext.swift */; };
+		44DDFC1628CDBDE9007389AF /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDFC1528CDBDE9007389AF /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44CFCEFC28CD07390073C595 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		44CFCEFE28CD0B5E0073C595 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		44D530AF28CC7AEC00DB0694 /* Triangles in square.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Triangles in square.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D530B228CC7AEC00DB0694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44D530B428CC7AEC00DB0694 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		44D530B628CC7AEC00DB0694 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		44D530B928CC7AEC00DB0694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44D530BB28CC7AF000DB0694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44D530BE28CC7AF000DB0694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44D530C028CC7AF000DB0694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44DDFC1128CDBD53007389AF /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		44DDFC1328CDBD76007389AF /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		44DDFC1528CDBDE9007389AF /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		B0D2C56B427E2A765ADF225E /* Pods-Triangles in square.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triangles in square.debug.xcconfig"; path = "Target Support Files/Pods-Triangles in square/Pods-Triangles in square.debug.xcconfig"; sourceTree = "<group>"; };
+		B8EAE5FA1CF44F557E0C2175 /* Pods_Triangles_in_square.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Triangles_in_square.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA66132CF46DFC16AB2CB6AB /* Pods-Triangles in square.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triangles in square.release.xcconfig"; path = "Target Support Files/Pods-Triangles in square/Pods-Triangles in square.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7C00E71D0F6B1DDB749A5A /* Pods_Triangles_in_square.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				44D530B128CC7AEC00DB0694 /* Triangles in square */,
 				44D530B028CC7AEC00DB0694 /* Products */,
+				EA35B3FF75ECEE3B626AC0A6 /* Pods */,
+				B128AFD3D14D088975F9DDF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +70,34 @@
 			isa = PBXGroup;
 			children = (
 				44D530B228CC7AEC00DB0694 /* AppDelegate.swift */,
-				44D530B428CC7AEC00DB0694 /* SceneDelegate.swift */,
 				44D530B628CC7AEC00DB0694 /* ViewController.swift */,
-				44D530B828CC7AEC00DB0694 /* Main.storyboard */,
+				44DDFC1528CDBDE9007389AF /* Point.swift */,
+				44CFCEFC28CD07390073C595 /* UITextField+Ext.swift */,
+				44CFCEFE28CD0B5E0073C595 /* Int+Ext.swift */,
+				44DDFC1128CDBD53007389AF /* UIColor+Ext.swift */,
+				44DDFC1328CDBD76007389AF /* UIViewController+Ext.swift */,
 				44D530BB28CC7AF000DB0694 /* Assets.xcassets */,
 				44D530BD28CC7AF000DB0694 /* LaunchScreen.storyboard */,
 				44D530C028CC7AF000DB0694 /* Info.plist */,
 			);
 			path = "Triangles in square";
+			sourceTree = "<group>";
+		};
+		B128AFD3D14D088975F9DDF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8EAE5FA1CF44F557E0C2175 /* Pods_Triangles_in_square.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA35B3FF75ECEE3B626AC0A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0D2C56B427E2A765ADF225E /* Pods-Triangles in square.debug.xcconfig */,
+				EA66132CF46DFC16AB2CB6AB /* Pods-Triangles in square.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44D530C328CC7AF000DB0694 /* Build configuration list for PBXNativeTarget "Triangles in square" */;
 			buildPhases = (
+				9FF769FCA2E6B0CAD185C92C /* [CP] Check Pods Manifest.lock */,
 				44D530AB28CC7AEC00DB0694 /* Sources */,
 				44D530AC28CC7AEC00DB0694 /* Frameworks */,
 				44D530AD28CC7AEC00DB0694 /* Resources */,
+				9D94367DE4A6393E7A111E5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +162,52 @@
 			files = (
 				44D530BF28CC7AF000DB0694 /* LaunchScreen.storyboard in Resources */,
 				44D530BC28CC7AF000DB0694 /* Assets.xcassets in Resources */,
-				44D530BA28CC7AEC00DB0694 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D94367DE4A6393E7A111E5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Triangles in square/Pods-Triangles in square-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Triangles in square/Pods-Triangles in square-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Triangles in square/Pods-Triangles in square-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF769FCA2E6B0CAD185C92C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Triangles in square-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44D530AB28CC7AEC00DB0694 /* Sources */ = {
@@ -139,22 +215,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D530B728CC7AEC00DB0694 /* ViewController.swift in Sources */,
+				44CFCEFD28CD07390073C595 /* UITextField+Ext.swift in Sources */,
+				44DDFC1428CDBD76007389AF /* UIViewController+Ext.swift in Sources */,
+				44DDFC1228CDBD53007389AF /* UIColor+Ext.swift in Sources */,
+				44DDFC1628CDBDE9007389AF /* Point.swift in Sources */,
 				44D530B328CC7AEC00DB0694 /* AppDelegate.swift in Sources */,
-				44D530B528CC7AEC00DB0694 /* SceneDelegate.swift in Sources */,
+				44CFCEFF28CD0B5E0073C595 /* Int+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		44D530B828CC7AEC00DB0694 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44D530B928CC7AEC00DB0694 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		44D530BD28CC7AF000DB0694 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +356,7 @@
 		};
 		44D530C428CC7AF000DB0694 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D2C56B427E2A765ADF225E /* Pods-Triangles in square.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,7 +367,7 @@
 				INFOPLIST_FILE = "Triangles in square/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,12 +379,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		44D530C528CC7AF000DB0694 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA66132CF46DFC16AB2CB6AB /* Pods-Triangles in square.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +396,7 @@
 				INFOPLIST_FILE = "Triangles in square/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +408,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

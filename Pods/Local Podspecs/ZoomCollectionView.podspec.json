@@ -1,0 +1,17 @@
+{
+  "name": "ZoomCollectionView",
+  "version": "0.1",
+  "summary": "Zoomable collection view for iOS",
+  "homepage": "https://github.com/helmutschneider/ZoomCollectionView",
+  "license": "MIT",
+  "authors": {
+    "Johan Björk": "johanimon@gmail.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/helmutschneider/ZoomCollectionView.git"
+  },
+  "source_files": "Source/**/*.{swift}"
+}

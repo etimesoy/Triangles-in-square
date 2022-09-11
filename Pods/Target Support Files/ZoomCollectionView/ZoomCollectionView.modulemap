@@ -1,0 +1,6 @@
+framework module ZoomCollectionView {
+  umbrella header "ZoomCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}

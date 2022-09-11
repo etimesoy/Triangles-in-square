@@ -1,0 +1,21 @@
+PODS:
+  - ZoomCollectionView (0.1)
+
+DEPENDENCIES:
+  - ZoomCollectionView (from `https://github.com/helmutschneider/ZoomCollectionView.git`)
+
+EXTERNAL SOURCES:
+  ZoomCollectionView:
+    :git: https://github.com/helmutschneider/ZoomCollectionView.git
+
+CHECKOUT OPTIONS:
+  ZoomCollectionView:
+    :commit: 5d94f87cc58b6f7477d72845c4f7edeaac074eba
+    :git: https://github.com/helmutschneider/ZoomCollectionView.git
+
+SPEC CHECKSUMS:
+  ZoomCollectionView: c3f942c7858205f23b6654807c26eeac11ef5c3d
+
+PODFILE CHECKSUM: 89d8510fad855dde105128b185f67925e9721566
+
+COCOAPODS: 1.11.3

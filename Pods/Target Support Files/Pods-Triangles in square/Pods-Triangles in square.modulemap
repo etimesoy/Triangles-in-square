@@ -1,0 +1,6 @@
+framework module Pods_Triangles_in_square {
+  umbrella header "Pods-Triangles in square-umbrella.h"
+
+  export *
+  module * { export * }
+}
